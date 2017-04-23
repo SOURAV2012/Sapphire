@@ -23,6 +23,7 @@
 		<java.version>1.8</java.version>
 		<spring.boot.version>1.5.2.RELEASE</spring.boot.version>
 		<junit.version>4.12</junit.version>
+		<log4j2.version>2.8.2</log4j2.version>
 		<!-- <spring.version></spring.version> -->
 	</properties>
 
@@ -57,6 +58,16 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
 
 
 	</dependencies>

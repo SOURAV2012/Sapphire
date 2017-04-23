@@ -30,3 +30,30 @@ COMMENT = 'VENDOR MASTER TABLE';
 
 ### INVENTORY MASTER ###
 
+### STATE MASTER ###
+
+DROP TABLE IF EXISTS `sapphire`.`state`;
+
+CREATE TABLE `sapphire`.`state` (                                                                    
+          `StateID` INT(11) NOT NULL AUTO_INCREMENT,                                              
+          `CountryID` INT(11) NOT NULL,                                                           
+          `StateName` VARCHAR(50) NOT NULL,                                                       
+          `Notes` LONGTEXT,                                                                       
+          `ChangedBy` VARCHAR(50) DEFAULT NULL,                                                   
+          `ChangeDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,  
+          PRIMARY KEY  (`StateID`)                                                                
+        ) ENGINE=INNODB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1
+        
+
+### CITI MASTER ###
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+DROP TABLE IF EXISTS `sapphire`.`cities`;
+
+CREATE TABLE IF NOT EXISTS `sapphire`.`cities` (
+  `city_id` int(11) NOT NULL AUTO_INCREMENT,
+  `city_name` varchar(100) NOT NULL,
+  `city_state` varchar(100) NOT NULL,
+  PRIMARY KEY (`city_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1624 ;
+

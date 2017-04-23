@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.sapphire.org.config.ViewFactory;
+import com.sapphire.org.constant.GlobalConstants;
 import com.sapphire.org.constant.ViewPath;
 import com.sapphire.org.fxutils.BasicFxUtils;
 import com.sapphire.org.fxutils.ControlAttr;
@@ -156,10 +157,18 @@ public class VendorDetailsController extends AbstractController {
 		_vendorPhoneLabel.setVisible(false);
 		_vendorCommentLabel.setVisible(false);
 		
+		_vendorName.setText(GlobalConstants.BLANK);
+		_vendorAddress.setText(GlobalConstants.BLANK);
+		_vendorState.setText(GlobalConstants.BLANK);								
+		_vendorPin.setText(GlobalConstants.BLANK);
+		_vendorCity.setText(GlobalConstants.BLANK);
+		_vendorPhone.setText(GlobalConstants.BLANK);
+		_vendorComments.setText(GlobalConstants.BLANK);	
+		
 		//Enable save button
 		_savehBtn.setDisable(false);
 		
-		//Set Vendor Label
+		//Set Vendor Label;
 		_vendorDetHeaderLabel.setText("Add New Vendors.......");
 		return vendorDetails;
 	}
